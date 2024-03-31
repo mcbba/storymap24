@@ -84,12 +84,15 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
  
-	L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
-		attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		apikey: 'db5ae1f5778a448ca662554581f283c5',
-		maxZoom: 22
-	}).addTo(map);
-
+	// L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
+	// 	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	// 	apikey: 'db5ae1f5778a448ca662554581f283c5',
+	// 	maxZoom: 22
+	// }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 	L.tileLayer('tiles/{z}/{x}/{y}.png', {
 		maxZoom: 16,
 		minZoom: 6,
